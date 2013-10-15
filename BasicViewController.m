@@ -45,7 +45,7 @@
     [self greatSmallView];
     
     
-    [_dataSource autorelease];
+    
     
 }
 
@@ -210,6 +210,12 @@
     [worktile release];
     [param release];
     
+}
+
+-(void)dealloc
+{
+    [_dataSource release];
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
